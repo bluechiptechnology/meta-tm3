@@ -1,0 +1,5 @@
+COMPATIBLE_MACHINE = "(tm3)"
+
+TFA_PLATFORM:tm3 = "sun50i_h6"
+
+TFA_BUILD_TARGET = "bl31"
