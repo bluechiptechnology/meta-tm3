@@ -3,8 +3,6 @@ COMPATIBLE_MACHINE:tm3 = "tm3"
 
 FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 
-SRCREV = "ac29400f1f4ae5df2542bacfe4c142db7824bd6c"
-
 SRC_URI +=  "file://sun50i-h6-bct-tm3.dts;subdir=git/arch/arm/dts \
              file://tm3_defconfig;subdir=git/configs/ \
 	     file://uart.patch \
