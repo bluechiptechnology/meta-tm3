@@ -1,0 +1,14 @@
+diff --git a/arch/arm/dts/Makefile b/arch/arm/dts/Makefile
+index cc34da7bd8..f8952bd3b9 100644
+--- a/arch/arm/dts/Makefile
++++ b/arch/arm/dts/Makefile
+@@ -657,7 +657,8 @@ dtb-$(CONFIG_MACH_SUN50I_H6) += \
+ 	sun50i-h6-orangepi-lite2.dtb \
+ 	sun50i-h6-orangepi-one-plus.dtb \
+ 	sun50i-h6-pine-h64.dtb \
+-	sun50i-h6-tanix-tx6.dtb
++	sun50i-h6-tanix-tx6.dtb \
++	sun50i-h6-bct-tm3.dtb
+ dtb-$(CONFIG_MACH_SUN50I_H616) += \
+ 	sun50i-h616-orangepi-zero2.dtb
+ dtb-$(CONFIG_MACH_SUN50I) += \
