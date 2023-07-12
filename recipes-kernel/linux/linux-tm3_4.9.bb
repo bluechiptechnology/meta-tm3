@@ -6,7 +6,7 @@ inherit kernel
 require recipes-kernel/linux/linux-yocto.inc
 
 SRC_URI = "git:///embedded/projects/tm3/lichee/linux-4.9;branch=master;protocol=file \
-	   file://defconfig"
+           file://defconfig"
 
 LINUX_VERSION ?= "4.9"
 LINUX_VERSION_EXTENSION:append = "-custom"

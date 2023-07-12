@@ -5,13 +5,11 @@ S = "${WORKDIR}"
 
 COMPATIBLE_MACHINE = "tm3"
 
-SRC_URI:append = " \
-        file://ssv6x5x-wifi.cfg \
-"
+SRC_URI:append = "file://ssv6x5x-wifi.cfg"
 
 do_install() {
-    	install -d ${D}${nonarch_base_libdir}/firmware
-	install -m 0644 ${S}/ssv6x5x-wifi.cfg ${D}${nonarch_base_libdir}/firmware/ssv6x5x-wifi.cfg
+    install -d ${D}${nonarch_base_libdir}/firmware
+    install -m 0644 ${S}/ssv6x5x-wifi.cfg ${D}${nonarch_base_libdir}/firmware/ssv6x5x-wifi.cfg
 }
 
 FILES:${PN}-wifi = "${nonarch_base_libdir}/firmware/ssv6x5x-wifi.cfg"
