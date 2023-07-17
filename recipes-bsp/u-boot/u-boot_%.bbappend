@@ -1,13 +1,14 @@
 DEPENDS:append:tm3 = " trusted-firmware-a"
 COMPATIBLE_MACHINE:tm3 = "tm3"
 
+UBOOT_MACHINE = "tm3_config"
+
 FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 
 SRC_URI += "file://sun50i-h6-bct-tm3.dts;subdir=git/arch/arm/dts \
             file://tm3_defconfig;subdir=git/configs/ \
             file://uart.patch \
             file://make.patch \
-            file://kconfig.patch \
             file://boot.cmd"
 
 # Added a patch to a Makefile so it builds a dtb from our dts 
