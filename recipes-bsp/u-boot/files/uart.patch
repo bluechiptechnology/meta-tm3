@@ -1,10 +1,10 @@
 diff --git a/arch/arm/mach-sunxi/board.c b/arch/arm/mach-sunxi/board.c
-index b4ba2a72c4..b9cac13af2 100644
+index 391a65a549..2c526681ec 100644
 --- a/arch/arm/mach-sunxi/board.c
 +++ b/arch/arm/mach-sunxi/board.c
-@@ -75,6 +75,24 @@ ulong board_get_usable_ram_top(ulong total_size)
+@@ -74,6 +74,24 @@ phys_size_t board_get_usable_ram_top(phys_size_t total_size)
  }
- #endif
+ #endif /* CONFIG_ARM64 */
  
 +static int sunxi_gpio_output(u32 pin, u32 val)
 +{
@@ -24,10 +24,10 @@ index b4ba2a72c4..b9cac13af2 100644
 +	return 0;
 +}
 +
+ #ifdef CONFIG_SPL_BUILD
  static int gpio_init(void)
  {
- 	__maybe_unused uint val;
-@@ -169,6 +187,9 @@ static int gpio_init(void)
+@@ -183,6 +201,9 @@ static int gpio_init(void)
  	writel(val, SUNXI_R_PIO_BASE + SUN50I_H6_GPIO_POW_MOD_SEL);
  #endif
  
@@ -36,3 +36,4 @@ index b4ba2a72c4..b9cac13af2 100644
 +
  	return 0;
  }
+ 

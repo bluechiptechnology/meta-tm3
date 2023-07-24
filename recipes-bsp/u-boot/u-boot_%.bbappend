@@ -1,6 +1,8 @@
 DEPENDS:append:tm3 = " trusted-firmware-a"
 COMPATIBLE_MACHINE:tm3 = "tm3"
 
+LIC_FILES_CHKSUM = "file://Licenses/README;md5=2ca5f2c35c8cc335f0a19756634782f1"
+SRCREV = "30db474704405be823259851cbb76fa05366c8af"
 UBOOT_MACHINE = "tm3_config"
 
 FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
