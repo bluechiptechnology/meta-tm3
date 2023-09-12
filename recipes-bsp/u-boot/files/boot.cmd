@@ -1,4 +1,4 @@
-load mmc 0:1 ${fdt_addr_r} tm3-hb8-7-c.dtb
+load mmc ${mmc_bootdev}:1 ${fdt_addr_r} tm3-hb8-7-c.dtb
 
 regulator dev vcc-ac200
 regulator value 3300000
