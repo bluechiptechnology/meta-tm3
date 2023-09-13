@@ -4,7 +4,7 @@ LIC_FILES_CHKSUM = "file://Licenses/README;md5=2ca5f2c35c8cc335f0a19756634782f1"
 UBOOT_MACHINE = "tm3_config"
 FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 
-SRC_URI = "git:///home/chris/Repositories/balena-tm3/layers/u-boot;branch=best;protocol=file \
+SRC_URI = "git://git@github.com/bluechiptechnology/u-boot-tm3.git;branch=main;protocol=ssh \
            file://sun50i-h6-bct-tm3.dts;subdir=git/arch/arm/dts \
            file://tm3_defconfig;subdir=git/configs/ \
            file://scpfelsram.fex \

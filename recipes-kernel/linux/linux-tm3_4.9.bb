@@ -5,7 +5,7 @@ KERNEL_VERSION_SANITY_SKIP = "1"
 inherit kernel
 require recipes-kernel/linux/linux-yocto.inc
 
-SRC_URI = "git:///embedded/projects/tm3/lichee/linux-4.9;branch=dev;protocol=file \
+SRC_URI = "git://git@github.com/bluechiptechnology/linux-tm3.git;branch=main;protocol=ssh\
            file://defconfig"
 
 LINUX_VERSION ?= "4.9"
