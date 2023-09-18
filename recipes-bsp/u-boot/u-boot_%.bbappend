@@ -10,7 +10,7 @@ SRC_URI = "git://git@github.com/bluechiptechnology/u-boot-tm3.git;branch=main;pr
            file://scpfelsram.fex \
            file://bl31.bin \
            file://boot.cmd"
-SRCREV = "1a21986665eeb667e8c0b5318b7b88618eb1e5f6"
+SRCREV = "288e8930bbbb0213562e736234664711f55d8b5b"
 
 # Added a patch to a Makefile so it builds a dtb from our dts 
 # https://e2e.ti.com/support/processors-group/processors/f/processors-forum/918932/compiler-am3352-yocto-u-boot-staging-build-failing-for-device-tree-source-is-not-correctly-specified
