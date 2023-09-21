@@ -5,7 +5,7 @@ KERNEL_VERSION_SANITY_SKIP = "1"
 inherit kernel
 require recipes-kernel/linux/linux-yocto.inc
 
-SRC_URI = "git://git@github.com/bluechiptechnology/linux-tm3.git;branch=main;protocol=ssh\
+SRC_URI = "git://github.com/bluechiptechnology/linux-tm3.git;branch=main;protocol=https\
            file://defconfig"
 SRCREV = "967875431780ebeb89d6acbed1e4534c712ec8b5"
 
