@@ -4,13 +4,13 @@ LIC_FILES_CHKSUM = "file://Licenses/README;md5=2ca5f2c35c8cc335f0a19756634782f1"
 UBOOT_MACHINE = "tm3_config"
 FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 
-SRC_URI = "git://github.com/bluechiptechnology/u-boot-tm3.git;branch=main;protocol=https \
+SRC_URI = "git://github.com/bluechiptechnology/u-boot-tm3.git;branch=31oct2023;protocol=https \
            file://sun50i-h6-bct-tm3.dts;subdir=git/arch/arm/dts \
            file://tm3_defconfig;subdir=git/configs/ \
            file://scpfelsram.fex \
            file://bl31.bin \
            file://boot.cmd"
-SRCREV = "288e8930bbbb0213562e736234664711f55d8b5b"
+SRCREV = "0ae9c18538ce86fd854a6372471a9d8a6f573e42"
 
 # Added a patch to a Makefile so it builds a dtb from our dts 
 # https://e2e.ti.com/support/processors-group/processors/f/processors-forum/918932/compiler-am3352-yocto-u-boot-staging-build-failing-for-device-tree-source-is-not-correctly-specified

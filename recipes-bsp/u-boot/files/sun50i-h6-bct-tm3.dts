@@ -223,8 +223,8 @@
 
 			reg_dcdce: dcdce {
 				regulator-always-on;
-				regulator-min-microvolt = <1200000>;
-				regulator-max-microvolt = <1200000>;
+				regulator-min-microvolt = <1400000>;
+				regulator-max-microvolt = <1400000>;
 				regulator-name = "dcdce";
 			};
 
