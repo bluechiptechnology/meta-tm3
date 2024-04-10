@@ -1,16 +1,16 @@
+inherit tm3
+
 COMPATIBLE_MACHINE:tm3 = "tm3"
 
 LIC_FILES_CHKSUM = "file://Licenses/README;md5=2ca5f2c35c8cc335f0a19756634782f1"
 UBOOT_MACHINE = "tm3_config"
 FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 
-SRC_URI = "git://github.com/bluechiptechnology/u-boot-tm3.git;branch=31oct2023;protocol=https \
-           file://sun50i-h6-bct-tm3.dts;subdir=git/arch/arm/dts \
+SRC_URI = "git://github.com/bluechiptechnology/u-boot-tm3.git;branch=32bit-ram;protocol=https \
            file://tm3_defconfig;subdir=git/configs/ \
-           file://scpfelsram.fex \
-           file://bl31.bin \
+           file://gcc-linaro-11.3.1-2022.06-x86_64_arm-linux-gnueabihf.tar.xz \
            file://boot.cmd"
-SRCREV = "0ae9c18538ce86fd854a6372471a9d8a6f573e42"
+SRCREV = "55e3f8394fb80b650745106fd34623e70a050bd4"
 
 # Added a patch to a Makefile so it builds a dtb from our dts 
 # https://e2e.ti.com/support/processors-group/processors/f/processors-forum/918932/compiler-am3352-yocto-u-boot-staging-build-failing-for-device-tree-source-is-not-correctly-specified
@@ -19,8 +19,7 @@ SRCREV = "0ae9c18538ce86fd854a6372471a9d8a6f573e42"
 
 UBOOT_ENV_SUFFIX:tm3 = "scr"
 UBOOT_ENV:tm3 = "boot"
-
-EXTRA_OEMAKE:append:tm3 = " BL31=${WORKDIR}/bl31.bin SCP=${WORKDIR}/scpfelsram.fex"
+TARGET_PREFIX = "${WORKDIR}/gcc-linaro-11.3.1-2022.06-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-"
 
 do_compile:append:tm3() {
     ${B}/tools/mkimage -C none -A arm -T script -d ${WORKDIR}/boot.cmd ${WORKDIR}/${UBOOT_ENV_BINARY}

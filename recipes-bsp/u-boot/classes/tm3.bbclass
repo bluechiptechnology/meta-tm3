@@ -1,0 +1,8 @@
+MACHINE = "tm3"
+CLASSOVERRIDE = "class-tm3"
+PACKAGE_ARCH = "tm3"
+PACKAGE_ARCHS += "tm3"
+TARGET_ARCH = "aarch64"
+TARGET_CC_ARCH = "tm3"
+TARGET_LD_ARCH = "tm3"
+TARGET_AS_ARCH = "tm3"
